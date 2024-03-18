@@ -1,14 +1,26 @@
-import { Fragment } from "react";
-import "./App.css";
-import { Button } from "./components/ui/button";
+import {
+	createBrowserRouter,
+	createRoutesFromElements,
+	RouterProvider,
+	Route,
+} from "react-router-dom";
+
+//importing the components
+import RootLayout from "./layout/RootLayout";
+import PdfDetails from "./pages/PdfDetails";
 
 function App() {
-	const handleButtonClick = () => {
-		console.log("Button clicked !!");
-	};
+	const router = createBrowserRouter(
+		createRoutesFromElements(
+			<Route path="/" element={<RootLayout />}>
+				<Route index element={<PdfDetails />} />
+			</Route>
+		)
+	);
+
 	return (
 		<div>
-			<Button onClick={handleButtonClick}>Hello</Button>
+			<RouterProvider router={router} />
 		</div>
 	);
 }

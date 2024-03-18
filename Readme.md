@@ -6,7 +6,7 @@
 
 ### Frontend:
 
-- [ ] Setting up the project
+- [X] Setting up the project
 - [ ] Implement a simple form to upload a PDF file. 
 - [ ] The form should include validation to ensure that only PDF files are uploaded.
 - [ ] Once the file is uploaded, display a visual representation of all pages in the PDF.
